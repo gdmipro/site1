@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Туристическое агенство</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=efa9bb30-cb81-4e6c-9f32-74f00d4d9617" type="text/javascript"></script>
+    <script src="js/geolocation3.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+    <body class='start'>
+      
+         <!-- Заголовок  -->
+
+        <header> 
+            <div class="logo"><img src="images/logo.png" alt="лого"></div>
+            <div class="tm"> <span><i class="material-icons">access_time</i></span>
+                             <span>9:00 - 18:00</span></div>
+            <div class="tel"><span><i class="material-icons">phone</i></span>
+                <span>+38 050 050 0505</span></div>
+            <div class="srh">
+                    <form action="#">
+                    <input type="search" name="n6" id="in6" list="mydata" autocomplete="off" placeholder="Поиск">
+                    <datalist id="mydata">
+                            <option value="Испания" label="Канарские острова">
+                            <option value="Турция" label="Анталия">
+                            <option value="Египет" label="Хургада">    
+                     </datalist>
+                     <button><i class="material-icons">search</i></button>
+                    </form>   
+
+            </div>
+        </header>
+
+        <!-- меню навигации -->
+
+        <nav> 
+            <div><a href="#a1">О компании</a></div>
+            <div><a href="#a2">Наши туры</a></div>
+            <div><a href="#a3">Горящие путевки</a></div>
+            <div><a href="#a4">Контакт</a></div>
+        </nav>
+    
+<main>
+
+        <!-- видео -->
+
+        <section>
+                <video id="intro" preload="auto"  width="100%">
+                <source src="media/anytour.mp4" type="video/mp4"> 
+                 <source src="media/anytour.webm" type="video/webm">
+                   <source src="media/anytour.ogv" type="video/ogg">
+                 
+                     <p>Браузер не поддерживает видео. <a href="media/anytour.mp4">Скачать файл.</a> </p> 
+                 </video>
+          <script>
+         intro.muted = true;
+         intro.addEventListener('click', push);
+                
+        function push(){
+            
+      if(!intro.paused && !intro.ended) intro.pause();
+      else intro.play(); 
+        }
+
+         </script>       
+        </section>
+
+<!-- О компании -->
+
+<section id="a1"> <h1>О компании<h1></section>
+
+<section class="about">
+
+    <div>
+            <section>
+                   <img id="p1" class="fade" src="images/img1b.jpg">                    
+            </section>
+                    
+                    <script type="text/javascript">
+                    let i=1; var p=7; 
+                
+                    function func() { if(++i>p)i=1; 
+                        
+                       p1.style.opacity = '0'
+                       setTimeout('pic()',1000)
+
+                       pic = () => {
+                       p1.src = "images/img"+i+"b.jpg";
+                       p1.style.opacity = '1'
+                       } 
+                        
+                       timerId=setTimeout('func();',6000); 
+                    }
+           
+                    setTimeout('func();',6000)
+
+                    </script>
+    </div>
+   
+    <div class="mytab">
+        
+            <section><h1>Откройте новые горизонты</h1></section>
+                
+            <section class="tb1"> <div id='id0' onclick="tab(id0,0)" class="colorOn">О компании</div> 
+                <div id='id1' onclick="tab(id1,1)">Почему выбирают нас</div> 
+                <div id='id2' onclick="tab(id2,2)">Наша миссия</div> 
+            </section>
+
+     <section class="tb2"><div id="txt">Мы - команда профессионалов в туризме с опытом работы более 10 
+         лет и опытом личных путешествий более чем в 45 странах мира. Офис компании 
+         в Акапулько стал третьим офисом сети наряду с офисами, открытыми ранее в 
+         Афинах и Лондоне. Мы знаем об отдыхе практически все, продолжая совершенствовать свои знания 
+         каждый год. Мы много путешествуем и открываем новые страны и маршруты, чтобы 
+         предложить их Вам.</div>
+         <div class="btn"> <a href="#a1_1" id="lnk">Наша команда</a></div>
+     </section>
+
+     <script>
+
+    let tab = (idn, n) => { 
+        
+ t1 = "Мы - команда профессионалов в туризме с опытом работы более 10 \
+  лет и опытом личных путешествий более чем в 45 странах мира. Офис компании \
+  в Акапулько стал третьим офисом сети наряду с офисами, открытыми ранее в \
+  Афинах и Лондоне. Мы знаем об отдыхе практически все, продолжая \
+  совершенствовать свои знания  каждый год. Мы много путешествуем и открываем новые \
+  страны и маршруты, чтобы предложить их Вам."
+
+  t2 = " В свою работу мы вкладываем душу и отдаем делу максимум энергии. Каждое \
+путешествие мы планируем для Вас так, словно художник рисует свою картину. Мы всегда \
+четко прорисовываем все детали и делаем яркие акценты на том, что важно именно для Вас."
+
+t3 = "Мы рады предложить всю палитру туров на выбор – от стандартных пакетных \
+вариантов до индивидуальных путешествий на любой вкус и бюджет. Нашими партнерами \
+являются более 70 ведущих мировых компаний, среди которых туроператоры, сети отелей, \
+круизные компании, авиакомпании, системы бронирования услуг и профессиональные гиды."
+
+  arrObj = [
+{ t:t1, b:'Наша команда', l:'#a1_1' },
+{ t:t2, b:'Наши туры', l:'#a2' },
+{ t:t3, b:'Горящие путевки', l:'#a3'}
+]
+
+                menu = document.querySelectorAll('.tb1 > div');
+                menu.forEach(function(item, i, menu) { item.removeAttribute('class')  })
+
+                                txt.innerHTML = arrObj[n].t
+                                lnk.innerHTML = arrObj[n].b
+                                lnk.href = arrObj[n].l
+                                idn.setAttribute('class','colorOn')
+                    }
+            
+                </script>
+    </div>
+</section>
+
+<section id="a2"> <h1>Наши туры<h1></section>
+
+    <section id="trvl">
+        
+            <div><img id="idp1" src="images/trv1.jpg" onclick="wopen(idp1)"><h2>Франция</h2></div>
+            <div><img id="idp2" src="images/trv2.jpg" onclick="wopen(idp2)"><h2>Италия</h2></div>
+            <div><img id="idp3" src="images/trv3.jpg" onclick="wopen(idp3)"><h2>Египет</h2></div>
+            <div><img id="idp4" src="images/trv4.jpg" onclick="wopen(idp4)"><h2>Дубай</h2></div>
+            <div><img id="idp5" src="images/trv5.jpg" onclick="wopen(idp5)"><h2>Испания</h2></div>
+            <div><img id="idp6" src="images/trv6.jpg" onclick="wopen(idp6)"><h2>Африка</h2></div>
+    
+    <script>
+    
+    function wopen(idpn) {
+    
+        let pct=idpn.getAttribute('src'); // файл картинки
+    
+        let w = document.documentElement.clientWidth // ширина окна
+        let h = document.documentElement.clientHeight // выстота окна
+    
+        ndiv = document.createElement('div')
+        ndiv.setAttribute('id', "mydiv");
+        ndiv.setAttribute('onclick', "mydiv0.removeChild(ndiv)");
+     
+        ndiv.style.cssText= "width: "+w+"px; \
+                             height: "+h+"px; \
+                             cursor: pointer" 
+        
+        mydiv0.appendChild(ndiv)
+    
+        nimg = document.createElement('img')
+        nimg.style.cssText= "height: "+h+"px" 
+        nimg.setAttribute('src', pct);
+        nimg.classList.add("ghost") 
+
+        mydiv.appendChild(nimg)
+        
+    }
+    
+    </script>
+    
+    </section>
+    
+    <div id="mydiv0"></div>  
+
+    <section id="a3"> <h1>Горящие путевки<h1></section>
+
+    <section id="hot">
+            <div>
+                <div class="hcont">  
+                <div><img src="images/htour1.jpg"></div>
+                <div><p>Бенидорм, Испания</p>
+                <p> <span class="material-icons">star star star star star_half</span> </p>
+                <p> <a href="#a3">21 отзыв</a></p>
+                <p>Бенидорм - это шумный курорт для пляжного отдыха. Расположенный на солнечной Коста Бланке, город является одним из оригинальных испанских пляжных курортов...</p>
+                <span class="btn"> <a href="#a3">Купить за $790</a></span> 
+                </div>
+                 </div>    
+            </div>  
+            
+            <div>
+                    <div class="hcont">  
+                    <div><img src="images/htour2.jpg"></div>
+                    <div><p>Остров Маврикий, Африка</p>
+                    <p> <span class="material-icons">star star star star star_border</span> </p>
+                    <p> <a href="#a3">16 отзывов</a></p>
+                    <p>Прекрасный и привлекательный остров Маврикий - идеальное место оттянуться после сафари. Побалуйте себя восхитительными ароматами и песчаными пляжами...</p>
+                    <span class="btn"> <a href="#a3">Купить за $890</a></span> 
+                    </div>
+                     </div>    
+                </div>  
+               
+    </section>    
+
+    <section id="a1_1"> <h1>Наша команда<h1></section>
+        <section id="team"> 
+                
+            <div>  
+                <div><img src="images/user1.jpg">    
+                    <span><a href="#a5">Виолетта Маркова</a></span>
+                    <span>CEO</span>
+                    <span>+38 050 050 0505</span>
+                </div>    
+            </div>
+
+            <div>  
+                    <div><img src="images/user2.jpg">    
+                        <span><a href="#a5">Василий Артемьев</a></span>
+                        <span>Турагент</span>
+                        <span>+38 050 050 0506</span>
+                    </div>    
+            </div>
+
+            <div>  
+                    <div><img src="images/user3.jpg">    
+                        <span><a href="#a5">Белла Фокина</a></span>
+                        <span>Консультант</span>
+                        <span>+38 050 050 0507</span>
+                    </div>    
+            </div>
+
+            <div>  
+                    <div><img src="images/user4.jpg">    
+                        <span><a href="#a5">Владимир Егоров</a></span>
+                        <span>PR менеджер</span>
+                        <span>+38 050 050 0508</span>
+                    </div>    
+            </div>
+
+        </section>
+
+        <section id="a4"> <h1>Контакт<h1></section>
+<!-- Карта -->
+            <section id="geo">
+        <div id="map"></div>
+            </section>   
+
+            <section id="a5"> <h1>Отправить сообщение<h1></section>
+<!-- Форма -->
+            <section id="contact">
+                <div>
+                <form action="server.php">
+                   <input type="text" name="fn" required placeholder="Ваше имя">  
+                        <input type="email" required name="eml" placeholder="E-mail">
+                        <input type="text" name="tl" placeholder="Телефон">
+                    <textarea rows="8" name="mess" required placeholder="Сообщение"></textarea> 
+             <input class="sbm" type="submit" value="Отправить">
+                </form>
+            </div>
+                
+            </section>
+
+
+<!-- Прокрутка вверх -->
+<script>
+    function scrl() {   
+
+        let w = document.documentElement.clientWidth // ширина окна
+        let h = document.documentElement.clientHeight // выстота окна
+
+          let pw = w - 80
+          let ph = h - 80
+
+        if (pageYOffset > h) { 
+
+            arr.style.top = ph+"px"
+            arr.style.left = pw+"px"
+
+            upward.style.display = "block"
+            
+            
+                    }
+           else upward.style.display = ''
+     }
+
+    window.addEventListener('scroll', scrl )
+
+
+</script>
+
+<div id="upward"><div id="arr"><a href="#top"><i class="material-icons">arrow_upward</i></a></div></div>
+
+</main>
+
+<footer>
+
+    <!-- Футер -->
+
+    <section id="foot"> 
+                        
+            <div>  
+                    <div><span>КОНТАКТНАЯ ИНФОРМАЦИЯ</span>
+                        <span><i class="material-icons">phone</i>&nbsp;&nbsp;&nbsp;<a href="#a5">+38 050 050 0505</a></span>
+                        <span><i class="material-icons">email</i>&nbsp;&nbsp;&nbsp;<a href="#a5">info@demolink.org</a></span>
+                        <span><i class="material-icons">near_me</i>&nbsp;&nbsp;&nbsp;<a href="#a5">Минск, пр. Победителей, 9</a></span>
+                    </div>   
+            </div>
+
+            <div>  
+                    <div><span>МЕНЮ САЙТА</span>
+                        <span><a href="#a1">О компании</a></span>
+                        <span><a href="#a2">Наши туры</a></span>
+                        <span><a href="#a3">Горящие путевки</a></span>
+                        <span><a href="#a1_1">Наша команда</a></span>
+                    </div>    
+            </div>
+
+            <div>  
+                    <div class="btn"> <span><a href="#a2">Наши туры</a></span>
+                        <span id="cyear"></span> 
+                    </div>   
+                    
+            </div>
+
+            <script>
+               
+                    let myTimeObj = new Date();
+                    let year = myTimeObj.getFullYear();
+s = "&copy; <time datetime=" + year + ">" + year + " Агенство путешествий"
+        cyear.innerHTML = s
+
+               </script>
+         </section>
+
+</footer>
+
+</body>
+</html>
